@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biodata Saya</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .header {
+      background: #4facfe;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .header h1 {
+      margin: 15px 0 5px;
+      font-size: 28px;
+    }
+
+    .content {
+      padding: 20px 40px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 10px;
+      color: #4facfe;
+      border-left: 5px solid #4facfe;
+      padding-left: 10px;
+      text-align: left;
+    }
+
+    .biodata table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .biodata td {
+      padding: 10px 0;
+      vertical-align: top;
+    }
+
+    .biodata td.label {
+      font-weight: bold;
+      width: 30%;
+      color: #444;
+    }
+
+    .hobby-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .hobby {
+      background: #f1f1f1;
+      border-radius: 20px;
+      padding: 8px 16px;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .hobby:hover {
+      background: #4facfe;
+      color: white;
+    }
+
+    .social {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .ig-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+      color: white;
+      font-weight: bold;
+      padding: 12px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(221, 42, 123, 0.5);
+      animation: pulse 2s infinite;
+    }
+
+    .ig-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(221, 42, 123, 0.7);
+    }
+
+    .ig-button i {
+      font-size: 22px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .nav-button {
+      background: #4facfe;
+      color: white;
+      font-weight: bold;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(79, 172, 254, 0.5);
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .nav-button:hover {
+      background: #00c3ff;
+      transform: scale(1.05);
+    }
+
+    .running-text {
+      background: #4facfe;
+      color: white;
+      font-weight: bold;
+      padding: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .content {
+        padding: 20px;
+      }
+      .ig-button {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HALAMAN 1 -->
+  <div class="container" id="page1">
+    <div class="header">
+      <h1>Andika</h1>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Tentang saya</h2>
+      <p>
+        Halo! Nama saya Andika Febrianda. Saya adalah seseorang yang penuh semangat untuk terus belajar, 
+        berkembang, dan mengejar cita-cita. Saya percaya bahwa setiap langkah kecil yang dilakukan dengan tekun 
+        akan membawa kita menuju kesuksesan besar.
+      </p>
+
+      <!-- Tombol dipindahkan ke sini -->
+      <button class="nav-button" onclick="nextPage()">Cerita Saya</button>
+
+      <h2 class="section-title">Biodata</h2>
+      <div class="biodata">
+        <table>
+          <tr>
+            <td class="label">Nama Lengkap</td>
+            <td>: Andika Febrianda</td>
+          </tr>
+          <tr>
+            <td class="label">Tempat, Tanggal Lahir</td>
+            <td>: Kampar, 07 Februari 2009</td>
+          </tr>
+          <tr>
+            <td class="label">Alamat</td>
+            <td>: PERUM. PEPUTRA RAYA BLOK N</td>
+          </tr>
+          <tr>
+            <td class="label">Email</td>
+            <td>: dikafebrianda17@gmail.com</td>
+          </tr>
+          <tr>
+            <td class="label">Telepon</td>
+            <td>: +62 895-6203-14516</td>
+          </tr>
+        </table>
+      </div>
+
+      <h2 class="section-title">Hobi</h2>
+      <div class="hobby-list">
+        <div class="hobby">Membaca</div>
+        <div class="hobby">Voli</div>
+        <div class="hobby">Futsal</div>
+      </div>
+
+      <h2 class="section-title">Sosial Media</h2>
+      <div class="social">
+        <a href="https://instagram.com/dika_fbrnda" target="_blank" class="ig-button">
+          <i class="fab fa-instagram"></i> Kunjungi Instagram Saya
+        </a>
+
+        <div class="social-icons" style="margin-top: 20px;">
+          <a href="https://facebook.com/username" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://github.com/username" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/username" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HALAMAN 2 -->
+  <div class="container hidden" id="page2">
+    <div class="header">
+      <h1>Cerita saya</h1>
+    </div>
+
+    <div class="content">
+      <h2 class="section-title">Tentang Saya Lebih Lanjut</h2>
+      <p>
+        Assalamu'alaikum warahmatullahi wabarakatuh, perkenalkan nama saya Andika febrianda biasa dipanggil dika,umur saya 16 tahun dan saya anak kedua dari tiga bersaudara,saya tinggal di perum.peputra raya. 
+      </p>
+
+      <h2 class="section-title">Cita-Cita</h2>
+      <p>
+        Saya bercita-cita menjadi seseorang yang sukses dan bermanfaat bagi orang lain, 
+        baik melalui pendidikan, teknologi, maupun kontribusi sosial.
+      </p>
+
+      <button class="nav-button" onclick="prevPage()">⬅ Kembali ke profil</button>
+    </div>
+  </div>
+
+  <div class="running-text">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Selamat datang di website biodata saya! Tetap semangat dan terus berkarya 🚀🔥
+    </marquee>
+  </div>
+
+  <script>
+    function nextPage() {
+      document.getElementById("page1").classList.add("hidden");
+      document.getElementById("page2").classList.remove("hidden");
+    }
+    function prevPage() {
+      document.getElementById("page2").classList.add("hidden");
+      document.getElementById("page1").classList.remove("hidden");
+    }
+  </script>
+
+</body>
+</html>
